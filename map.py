@@ -28,7 +28,7 @@ def generate_map(h, w, points=None):
 '''
 所有可修改的初值
 '''
-AI_level = 3  # 电脑等级：1-4
+AI_level = 1  # 电脑等级：1-4
 num_apples = 1  # 苹果数量
 score_apples = 100  # 苹果分值：1-10000
 INTERVAL = 40  # 控制动画帧率
@@ -45,10 +45,3 @@ INITIAL_SNAKE_BODY = [[2, 2], [1, 2], [1, 1]]  # 蛇的初始位置
 MAP_DATA[INITIAL_SNAKE_BODY[0][0]][INITIAL_SNAKE_BODY[0][1]] = -3
 for position in INITIAL_SNAKE_BODY[1:]:
     MAP_DATA[position[0]][position[1]] = -2  # 设置初始蛇体位置
-
-
-def reset_map():
-    MAP_DATA = generate_map(7 + 2, 7 + 2)  # , points)  # 地图大小
-    MAP_DATA[INITIAL_SNAKE_BODY[0][0]][INITIAL_SNAKE_BODY[0][1]] = -3
-    for position in INITIAL_SNAKE_BODY[1:]:
-        MAP_DATA[position[0]][position[1]] = -2  # 设置初始蛇体位置

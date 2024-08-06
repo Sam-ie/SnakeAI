@@ -4,7 +4,6 @@ from heapq import heappop, heappush
 
 from map import Point
 import map
-import DCN
 
 directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]  # 右、左、下、上
 
@@ -249,6 +248,7 @@ def decide_advanced_direction(head, rate):
 
 def decide_super_advanced_direction(head):
     # 可以使用深度Q网络 (Deep Q-Network, DQN)，项目见D3QN-Snake-master
+    # (https://github.com/panjd123/D3QN-Snake)
     return decide_simple_direction(head)
 
 
